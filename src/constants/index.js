@@ -11,6 +11,8 @@ import {
   redux,
   tailwind,
   nodejs,
+  reactquery,
+  nestjs,
   mongodb,
   git,
   figma,
@@ -42,32 +44,18 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Desenvolvedor Web",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Desenvolvedor Mobile",
     icon: mobile,
   },
-  {
-    title: "Backend Developer",
-    icon: backend,
-  },
-  {
-    title: "Content Creator",
-    icon: creator,
-  },
+
+
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
   {
     name: "JavaScript",
     icon: javascript,
@@ -77,39 +65,39 @@ const technologies = [
     icon: typescript,
   },
   {
-    name: "React JS",
+    name: "ReactJS",
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "React Native",
+    icon: reactjs,
   },
   {
     name: "Tailwind CSS",
     icon: tailwind,
   },
   {
-    name: "Node JS",
+    name: "React Query",
+    icon: reactquery,
+  },
+  {
+    name: "NodeJS",
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "NestJS",
+    icon: nestjs,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
+    name: "Git",
     icon: git,
   },
   {
-    name: "figma",
+    name: "Figma",
     icon: figma,
   },
   {
-    name: "docker",
+    name: "Docker",
     icon: docker,
   },
 ];

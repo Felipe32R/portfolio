@@ -20,16 +20,19 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import reactquery from "./tech/reactquery.png";
+
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
+
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import nestjs from "./tech/nestjs.png";
 export {
   logo,
   backend,
@@ -38,6 +41,7 @@ export {
   web,
   github,
   menu,
+  reactquery,
   close,
   css,
   docker,
@@ -50,6 +54,7 @@ export {
   reactjs,
   redux,
   tailwind,
+  nestjs,
   typescript,
   threejs,
   meta,
