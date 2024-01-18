@@ -6,6 +6,7 @@ import { styles } from "../styles"
 import { EarthCanvas } from "./canvas"
 import { SectionWrapper } from "../hoc"
 import { slideIn } from "../utils/motion"
+import toast from "react-hot-toast"
  
 const Contact = () => {
   const formRef = useRef();
@@ -13,11 +14,59 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
-
+ const { name, value} = e.target;
+ setForm({...form, [name]: value})
   }
 
-  const handleSubmit = (e) => {
+  const isValidEmail = (email) => {
+    // Expressão regular para validar o formato de e-mail
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    console.log(form)
+    if(form.name.length === 0 || form.email.length === 0 || form.message.length === 0){
+      toast('Preencha todos os campos.', {
+        icon: '🌞',
+      });
+      setLoading(false);
+      return
+    }
+    if (!isValidEmail(form.email)) {
+      toast('Insira um e-mail válido.', {
+        icon: '😁',
+      });
+      setLoading(false);
+      return;
+    }
+
+//template_9sljxvw
+//service_hvs9bpr
+//UTCgsrN8a81_frTAN 
+    emailjs.send('service_hvs9bpr','template_9sljxvw', {
+      from_name: form.name,
+      to_name: 'Felipe',
+      from_email: form.email,
+      to_email: 'feliperamalhoy@gmail.com',
+      message: form.message
+    },
+    'UTCgsrN8a81_frTAN'
+    ).then(() => {
+      setLoading(false);
+      toast.success("Obrigado! Responderei assim que possível!")
+      setForm({
+        name:'',
+        email: '', 
+        message:'' 
+      })
+    },(error) => {
+      setLoading(false);
+      console.log("Erro ao enviar e-mail:", error)
+      toast.error("Algo deu errado.")
+    })
   }
 
   return (
@@ -33,7 +82,7 @@ const Contact = () => {
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">E-mail </span>
-            <input type="email" name="email" value={form.email} onChange={handleChange} placeholder="E-mail" className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"/>
+            <input type="string" name="email" value={form.email} onChange={handleChange} placeholder="E-mail" className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"/>
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Mensagem </span>
