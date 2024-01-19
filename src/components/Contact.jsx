@@ -56,7 +56,7 @@ const Contact = () => {
     'UTCgsrN8a81_frTAN'
     ).then(() => {
       setLoading(false);
-      toast.success("Obrigado! Responderei assim que possível!")
+      toast.success("Muito Obrigado! Responderei assim que possível!")
       setForm({
         name:'',
         email: '', 
