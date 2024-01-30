@@ -4,6 +4,15 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      animation: {
+        "loop-scroll": "loop-scroll 50s linear infinite",
+      },
+      keyframes: {
+        "loop-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateY(-100%)" },
+        },
+      },
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",

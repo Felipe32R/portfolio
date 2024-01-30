@@ -51,8 +51,10 @@ const services = [
     title: "Desenvolvedor Mobile",
     icon: mobile,
   },
-
-
+  {
+    title: "Freelancer",
+    icon: creator,
+  },
 ];
 
 const technologies = [
