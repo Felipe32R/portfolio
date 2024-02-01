@@ -21,6 +21,7 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import reactquery from "./tech/reactquery.png";
+import nestjs from "./tech/nestjs.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -28,9 +29,9 @@ import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
 
 import waiterapp from "./waiterapp.svg";
-import jobit from "./jobit.png";
+import sgce from "./sgce.png";
 import tripguide from "./tripguide.png";
-import nestjs from "./tech/nestjs.png";
+
 export {
   logo,
   backend,
@@ -60,6 +61,6 @@ export {
   starbucks,
   tesla,
   waiterapp,
-  jobit,
   tripguide,
+  sgce,
 };

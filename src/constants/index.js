@@ -16,8 +16,9 @@ import {
   tesla,
   shopify,
   waiterapp,
-  jobit,
   tripguide,
+  creator,
+  sgce,
 } from "../assets";
 
 export const navLinks = [
@@ -26,8 +27,8 @@ export const navLinks = [
     title: "Sobre",
   },
   {
-    id: "work",
-    title: "Trabalho",
+    id: "projects",
+    title: "Projetos",
   },
   {
     id: "contact",
@@ -44,10 +45,10 @@ const services = [
     title: "Desenvolvedor Mobile",
     icon: mobile,
   },
-  // {
-  //   title: "Freelancer",
-  //   icon: creator,
-  // },
+  {
+    title: "Freelancer",
+    icon: creator,
+  },
 ];
 
 const technologies = [
@@ -199,12 +200,12 @@ const projects = [
       },
     ],
     image: waiterapp,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Felipe32R/JStack/tree/main/WaiterApp",
   },
   {
-    name: "Job IT",
+    name: "SGCE",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Sistema de gerenciamento de campanhas eleitorais. Realize pesquisa sobre campanhas de candidatos de qualquer localidade e fique por dentro das informações com maior clareza.",
     tags: [
       {
         name: "react",
@@ -215,30 +216,30 @@ const projects = [
         color: "green-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: sgce,
+    source_code_link: "https://github.com/Felipe32R/SGCE",
   },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+  // {
+  //   name: "Trip Guide",
+  //   description:
+  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "supabase",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: tripguide,
+  //   source_code_link: "https://github.com/",
+  // },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
