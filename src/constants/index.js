@@ -205,7 +205,7 @@ const projects = [
   {
     name: "SGCE",
     description:
-      "Sistema de gerenciamento de campanhas eleitorais. Realize pesquisa sobre campanhas de candidatos de qualquer localidade e fique por dentro das informações com maior clareza.",
+      "Sistema de gerenciamento de campanhas eleitorais. Realize pesquisas sobre campanhas de candidatos de qualquer localidade e fique por dentro das informações com maior clareza.",
     tags: [
       {
         name: "react",
