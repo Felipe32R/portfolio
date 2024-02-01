@@ -1,19 +1,13 @@
 import {
   mobile,
-  backend,
-  creator,
   web,
   javascript,
   typescript,
-  html,
-  css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
   reactquery,
   nestjs,
-  mongodb,
   git,
   figma,
   docker,
@@ -21,10 +15,9 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
+  waiterapp,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -51,10 +44,10 @@ const services = [
     title: "Desenvolvedor Mobile",
     icon: mobile,
   },
-  {
-    title: "Freelancer",
-    icon: creator,
-  },
+  // {
+  //   title: "Freelancer",
+  //   icon: creator,
+  // },
 ];
 
 const technologies = [
@@ -188,24 +181,24 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "WaiterApp",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Nesse aplicativo mobile, o cliente pode realizar os pedidos, e o garçom através de uma plataforma web consegue gerenciar os itens, confirmar e cancelar pedidos em tempo real.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "react native",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "express",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: waiterapp,
     source_code_link: "https://github.com/",
   },
   {
@@ -218,12 +211,8 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "nestjs",
         color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
       },
     ],
     image: jobit,
