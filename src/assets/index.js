@@ -32,6 +32,9 @@ import waiterapp from "./waiterapp.svg";
 import sgce from "./sgce.png";
 import tripguide from "./tripguide.png";
 
+import githubIcon from "../assets/githubIcon.svg";
+import linkedinIcon from "../assets/linkedinIcon.svg";
+
 export {
   logo,
   backend,
@@ -63,4 +66,6 @@ export {
   waiterapp,
   tripguide,
   sgce,
+  githubIcon,
+  linkedinIcon,
 };
