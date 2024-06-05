@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const { i18n } = useTranslation();
+
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -13,18 +16,36 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 bg-gradient-to-b from-teal-200" />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Olá, sou o <span className="text-teal-200">Felipe!</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Construindo aplicações que não são apenas vistas,
-            <br className="sm:block hidden " /> mas também sentidas.
-            <br className="sm:block hidden " />{" "}
-            <span className="text-teal-500">
-              {" "}
-              – uma linha de código por vez.
-            </span>
-          </p>
+          {i18n.resolvedLanguage === "pt" ? (
+            <>
+              <h1 className={`${styles.heroHeadText} text-white`}>
+                Olá, sou o <span className="text-teal-200">Felipe!</span>
+              </h1>
+              <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+                Construindo aplicações que não são apenas vistas,
+                <br className="sm:block hidden " /> mas também sentidas.
+                <br className="sm:block hidden " />{" "}
+                <span className="text-teal-500">
+                  {" "}
+                  – uma linha de código por vez.
+                </span>
+              </p>
+            </>
+          ) : (
+            <>
+              <h1 className={`${styles.heroHeadText} text-white`}>
+                Hello, I am <span className="text-teal-200">Felipe!</span>
+              </h1>
+              <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+                Building applications that are not only seen,
+                <br className="sm:block hidden" /> but also felt.
+                <br className="sm:block hidden" />{" "}
+                <span className="text-teal-500">
+                  – one line of code at a time.
+                </span>
+              </p>
+            </>
+          )}
         </div>
       </div>
       <ComputersCanvas />

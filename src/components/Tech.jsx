@@ -1,6 +1,6 @@
-import { SectionWrapper } from "../hoc";
-import { technologies } from "../constants";
 import Marquee from "react-fast-marquee";
+import { technologies } from "../constants";
+import { SectionWrapper } from "../hoc";
 const Tech = () => {
   return (
     <>
@@ -8,6 +8,7 @@ const Tech = () => {
         <div className="w-[1px] sm:h-80 h-40 bg-gradient-to-t from-teal-200" />
         <Marquee
           autoFill
+          speed={100}
           className="overflow-hidden cursor-pointer"
           pauseOnClick
         >

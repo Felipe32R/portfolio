@@ -1,27 +1,43 @@
 import {
-  mobile,
-  web,
-  javascript,
-  typescript,
-  reactjs,
-  tailwind,
-  nodejs,
-  reactquery,
-  nestjs,
-  git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  waiterapp,
-  tripguide,
   creator,
+  docker,
+  figma,
+  git,
+  javascript,
+  letmeask,
+  meta,
+  mobile,
+  nestjs,
+  nodejs,
+  nuxt,
+  podcastr,
+  reactjs,
   sgce,
+  shopify,
+  starbucks,
+  tailwind,
+  tesla,
+  typescript,
+  vue,
+  waiterapp,
+  web,
 } from "../assets";
 
 export const navLinks = [
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "projects",
+    title: "Projects",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
+];
+export const navLinksEn = [
   {
     id: "about",
     title: "Sobre",
@@ -38,11 +54,11 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Desenvolvedor Web",
+    title: "Web",
     icon: web,
   },
   {
-    title: "Desenvolvedor Mobile",
+    title: "Mobile",
     icon: mobile,
   },
   {
@@ -69,13 +85,18 @@ const technologies = [
     icon: reactjs,
   },
   {
+    name: "VueJS",
+    icon: vue,
+  },
+  {
+    name: "Nuxt",
+    icon: nuxt,
+  },
+  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
-  {
-    name: "React Query",
-    icon: reactquery,
-  },
+
   {
     name: "NodeJS",
     icon: nodejs,
@@ -219,27 +240,117 @@ const projects = [
     image: sgce,
     source_code_link: "https://github.com/Felipe32R/SGCE",
   },
-  // {
-  //   name: "Trip Guide",
-  //   description:
-  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: tripguide,
-  //   source_code_link: "https://github.com/",
-  // },
+  {
+    name: "Podcastr",
+    description: "Reprodutor de podcasts estilo Spotify.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "green-text-gradient",
+      },
+    ],
+    image: podcastr,
+    source_code_link: "https://github.com/Felipe32R/podcastr",
+  },
+  {
+    name: "Letmeask",
+    description: "Plataforma de Q&A com autenticação do google.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "green-text-gradient",
+      },
+    ],
+    image: letmeask,
+    source_code_link: "https://github.com/Felipe32R/letmeask",
+  },
+];
+const projectsEn = [
+  {
+    name: "WaiterApp",
+    description:
+      "In this mobile application, the customer can place orders, and the waiter, through a web platform, can manage items, confirm and cancel orders in real time.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react native",
+        color: "green-text-gradient",
+      },
+      {
+        name: "express",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: waiterapp,
+    source_code_link: "https://github.com/Felipe32R/JStack/tree/main/WaiterApp",
+  },
+  {
+    name: "SGCE",
+    description:
+      "Election campaign management system. Carry out research on candidate campaigns from any location and stay on top of the information with greater clarity.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nestjs",
+        color: "green-text-gradient",
+      },
+    ],
+    image: sgce,
+    source_code_link: "https://github.com/Felipe32R/SGCE",
+  },
+  {
+    name: "Podcastr",
+    description: "Spotify-style podcast player.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "react",
+        color: "green-text-gradient",
+      },
+    ],
+    image: podcastr,
+    source_code_link: "https://github.com/Felipe32R/podcastr",
+  },
+  {
+    name: "Letmeask",
+    description: "Q&A platform with Google authentication.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "firebase",
+        color: "green-text-gradient",
+      },
+    ],
+    image: letmeask,
+    source_code_link: "https://github.com/Felipe32R/letmeask",
+  },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  experiences,
+  projects,
+  projectsEn,
+  services,
+  technologies,
+  testimonials,
+};

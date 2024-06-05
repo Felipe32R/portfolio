@@ -1,10 +1,11 @@
-import React from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
-import { styles } from "../styles";
+import React from "react";
+import { Trans, useTranslation } from "react-i18next";
+import { Tilt } from "react-tilt";
 import { github } from "../assets";
+import { projects, projectsEn } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
+import { styles } from "../styles";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
@@ -62,26 +63,48 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const { i18n } = useTranslation();
+
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Meu trabalho</p>
-        <h2 className={styles.sectionHeadText}>Meus projetos</h2>
+        <p className={styles.sectionSubText}>
+          <Trans i18nKey="projectLabel"></Trans>
+        </p>
+        <h2 className={styles.sectionHeadText}>
+          <Trans i18nKey="projectTitle"></Trans>
+        </h2>
       </motion.div>
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Os projetos a seguir refletem minhas habilidades e experiências
-          através de exemplos reais. Cada projeto possui uma breve descrição e{" "}
-          <span className="italic">links</span> para os repositórios de código.
+          <Trans i18nKey="projectDescription"></Trans>
         </motion.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+        {i18n.resolvedLanguage === "pt" ? (
+          <>
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={`project-${index}`}
+                index={index}
+                {...project}
+              />
+            ))}
+          </>
+        ) : (
+          <>
+            {projectsEn.map((project, index) => (
+              <ProjectCard
+                key={`project-${index}`}
+                index={index}
+                {...project}
+              />
+            ))}
+          </>
+        )}
       </div>
     </>
   );

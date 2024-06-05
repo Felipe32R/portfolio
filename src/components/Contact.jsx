@@ -1,14 +1,18 @@
-import { useState, useRef } from "react";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
 
-import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
-import { SectionWrapper } from "../hoc";
-import { slideIn } from "../utils/motion";
 import toast from "react-hot-toast";
 
+import { useTranslation } from "react-i18next";
+import { SectionWrapper } from "../hoc";
+import { styles } from "../styles";
+import { slideIn } from "../utils/motion";
+import { EarthCanvas } from "./canvas";
+
 const Contact = () => {
+  const { i18n } = useTranslation();
+
   const formRef = useRef();
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
@@ -33,14 +37,14 @@ const Contact = () => {
       form.email.length === 0 ||
       form.message.length === 0
     ) {
-      toast("Preencha todos os campos.", {
+      toast("Preencha todos os campos. Fill all the fields.", {
         icon: "🌞",
       });
       setLoading(false);
       return;
     }
     if (!isValidEmail(form.email)) {
-      toast("Insira um e-mail válido.", {
+      toast("Insira um e-mail válido. Insert a valid e-mail.", {
         icon: "😁",
       });
       setLoading(false);
@@ -66,7 +70,7 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          toast.success("Muito Obrigado! Responderei assim que possível!");
+          toast.success("Muito Obrigado! - Thank you!");
           setForm({
             name: "",
             email: "",
@@ -87,8 +91,14 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-6 rounded-2xl "
       >
-        <p className={styles.sectionSubText}>Me mande uma mensagem!</p>
-        <h3 className={styles.sectionHeadText}>Contato</h3>
+        <p className={styles.sectionSubText}>
+          {i18n.resolvedLanguage === "pt"
+            ? "Me envie uma mensagem!"
+            : "Send me a message!"}
+        </p>
+        <h3 className={styles.sectionHeadText}>
+          {i18n.resolvedLanguage === "pt" ? "Contato" : "Contact"}
+        </h3>
 
         <form
           ref={formRef}
@@ -96,12 +106,14 @@ const Contact = () => {
           className="mt-4 flex flex-col gap-4"
         >
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Seu nome </span>
+            <span className="text-white font-medium mb-4">
+              {i18n.resolvedLanguage === "pt" ? "Nome" : "Name"}{" "}
+            </span>
             <input
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Nome"
+              placeholder={i18n.resolvedLanguage === "pt" ? "Nome" : "Name"}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium"
             />
           </label>
@@ -117,23 +129,37 @@ const Contact = () => {
             />
           </label>
           <label className="flex flex-col">
-            <span className="text-white font-medium mb-4">Mensagem </span>
+            <span className="text-white font-medium mb-4">
+              {i18n.resolvedLanguage === "pt" ? "Mensagem" : "Message"}{" "}
+            </span>
             <textarea
               rows="5"
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Mensagem"
+              placeholder={
+                i18n.resolvedLanguage === "pt" ? "Mensagem" : "Message"
+              }
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outlined-none border-none font-medium resize-none overflow-y-scroll"
             />
           </label>
-          <button
-            type="submit"
-            className="bg-tertiary py-3 px-8  outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
-          >
-            {" "}
-            {loading ? "Enviando..." : "Enviar"}
-          </button>
+          {i18n.resolvedLanguage === "pt" ? (
+            <button
+              type="submit"
+              className="bg-slate-600 self-end py-3 px-8  outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+            >
+              {" "}
+              {loading ? "Enviando..." : "Enviar"}
+            </button>
+          ) : (
+            <button
+              type="submit"
+              className="bg-slate-600 self-end py-3 px-8  outline-none w-fit text-white font-bold shadow-md shadow-primary rounded-xl "
+            >
+              {" "}
+              {loading ? "Sending..." : "Send"}
+            </button>
+          )}
         </form>
       </motion.div>
       <motion.div
