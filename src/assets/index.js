@@ -8,6 +8,7 @@ import mobile from "./mobile.png";
 import web from "./web.png";
 
 import css from "./tech/css.png";
+import next from "./tech/next.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
@@ -68,6 +69,7 @@ export {
   nuxt,
   podcastr,
   reactjs,
+  next,
   reactquery,
   redux,
   sgce,

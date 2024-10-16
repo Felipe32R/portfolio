@@ -1,5 +1,5 @@
 import {
-  creator,
+  next,
   docker,
   figma,
   git,
@@ -61,10 +61,7 @@ const services = [
     title: "Mobile",
     icon: mobile,
   },
-  {
-    title: "Freelancer",
-    icon: creator,
-  },
+
 ];
 
 const technologies = [
@@ -77,8 +74,12 @@ const technologies = [
     icon: typescript,
   },
   {
-    name: "ReactJS",
+    name: "React",
     icon: reactjs,
+  },
+  {
+    name: "NextJS",
+    icon: next,
   },
   {
     name: "React Native",
