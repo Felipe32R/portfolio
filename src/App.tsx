@@ -15,14 +15,14 @@ function App() {
     {
       title: "SGCE",
       description: "Election Campaign Management",
-      tags: ["react", "nest", "docker", "postgresql"],
+      tags: ["react", "nest", "postgresql"],
       link: "https://github.com/Felipe32R/SGCE",
     },
     {
       title: "Podcastr",
       description: "Spotify-like Podcast Player",
-      tags: ["next", "nest"],
-      link: "https://github.com/Felipe32R/SGCE",
+      tags: ["next"],
+      link: "https://github.com/Felipe32R/podcastr",
     },
     {
       title: "PlannerApp",
