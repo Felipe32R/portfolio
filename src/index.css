@@ -9,10 +9,11 @@
 
 /* 2. Remove default margin */
 * {
-  margin: 0;
-  font-family: "Roboto condensed", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
+h1,
+h2,
 h3 {
   font-family: "Quicksand";
 }

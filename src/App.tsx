@@ -15,20 +15,20 @@ function App() {
     {
       title: "SGCE",
       description: "Election Campaign Management",
-      tags: ["react", "nestjs", "docker", "postgresql"],
+      tags: ["react", "nest", "docker", "postgresql"],
       link: "https://github.com/Felipe32R/SGCE",
     },
     {
       title: "Podcastr",
       description: "Spotify-like Podcast Player",
-      tags: ["nextjs"],
+      tags: ["next", "nest"],
       link: "https://github.com/Felipe32R/SGCE",
     },
     {
-      title: "Letmeask",
-      description: "Q&A Platform",
-      tags: ["react", "firebase"],
-      link: "https://github.com/Felipe32R/letmeask",
+      title: "Planner App",
+      description: "Trip Planner App",
+      tags: ["react native", "fastify"],
+      link: "https://github.com/Felipe32R/plannerapp",
     },
   ];
 
@@ -38,12 +38,12 @@ function App() {
     <div className="flex flex-col items-center h-dvh w-full bg-zinc-900 text-white justify-center py-10 sm:py-20">
       <header className="flex flex-col gap-1  mb-10 w-[78%] items-start">
         <h3 className="font-medium text-3xl">Felipe Ramalho</h3>
-        <h3 className="text-zinc-300 xl">
+        <h3 className="text-zinc-300 text-xl">
           Full Stack Engineer - Front End Focus
         </h3>
       </header>
       <div className="w-[90%] sm:w-[80%] h-full flex flex-col p-4 gap-8">
-        <nav className="w-full flex items-center justify-end gap-4 ">
+        <h1 className="w-full flex items-center justify-end gap-4 font-semibold">
           <span
             onClick={() => setSelectedView("certs")}
             className={`cursor-pointer ${
@@ -60,7 +60,7 @@ function App() {
           >
             Projects
           </span>
-        </nav>
+        </h1>
         {selectedView === "projects" && <Projects projects={projects} />}
         {selectedView === "xp" && <Projects projects={projects} />}
         {selectedView === "certs" && <Certifications />}

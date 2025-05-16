@@ -4,7 +4,7 @@ import linkedinIcon from "../../assets/linkedinIcon.svg";
 export function Footer() {
   return (
     <div className="flex-1 items-end flex-col sm:flex-row md:flex-row lg:flex-row xl:flex-row  flex w-full justify-end gap-5 lg:h-20 ">
-      <span className="socials">Feel free to send me a message!</span>
+      <span className="socials text-xs">© 2025 Felipe Ramalho</span>
 
       <div className="flex md:flex-row lg:flex-row xl:flex-row  items-center gap-4">
         <a href="https://github.com/Felipe32R" target="blank">
