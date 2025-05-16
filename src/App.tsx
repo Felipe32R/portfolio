@@ -25,7 +25,7 @@ function App() {
       link: "https://github.com/Felipe32R/SGCE",
     },
     {
-      title: "Planner App",
+      title: "PlannerApp",
       description: "Trip Planner App",
       tags: ["react native", "fastify"],
       link: "https://github.com/Felipe32R/plannerapp",
